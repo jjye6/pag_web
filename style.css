@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    transition: background-color 0.5s ease;
+
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 20px; 
+    border: 5px solid #fff;
+}
+
+/* BODY */
+body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* HEADER */
+header {
+    background-color: #f4f4f4;
+    padding: 3rem 0;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* PROYECTOS */
+#proyectos {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#proyectos h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.proyectos-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.proyectos {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proyectos img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.proyectos h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.proyectos p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* CONTACTOS */
+#contactos {
+    background-color: #f4f4f4;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#contactos h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contactos_links {
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;  
+}
+
+.contactos_item {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    height: 100%; 
+}
+
+.contactos_item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.contactos_item p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 5px; 
+}
+
+#contactos .contactos_item:last-child {
+    margin-top: 2rem;
+}
+
+#contactos .contactos_item p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer button {
+    background-color: #444;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer button:hover {
+    background-color: #555;
+}
+
+
+/* MODO OSCURO */
+body.dark-mode {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+body.dark-mode #proyectos {
+    background-color: #444;
+}
+
+body.dark-mode .proyectos {
+    background-color: #555;
+}
+
+body.dark-mode .proyectos h3 {
+    color: #fff; 
+}
+
+body.dark-mode .proyectos p {
+    color: #ccc; 
+}
+
+body.dark-mode h1 {
+    color: #fff; 
+}
+
+body.dark-mode p {
+    color: #ccc; 
+}
+
+body.dark-mode #contactos {
+    background-color: #333;
+}
+
+body.dark-mode .contactos_item p {
+    color: #f4f4f4;
+}
+
+body.dark-mode .contactos_item img {
+    filter: brightness(0) invert(1);  /* Cambiar a blanco en el modo oscuro */
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
