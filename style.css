@@ -132,14 +132,6 @@ header p {
     color: #333;
 }
 
-/* Espaciado extra entre GitHub y LinkedIn en escritorio */
-@media (min-width: 769px) { 
-    #contactos .contactos_item:nth-child(1), /* GitHub */
-    #contactos .contactos_item:nth-child(2) { /* LinkedIn */
-        margin-right: 2rem;
-    }
-}
-
 /* FOOTER */
 footer {
     background-color: #333;
@@ -213,6 +205,13 @@ body.dark-mode footer {
 }
 
 /* RESPONSIVIDAD */
+@media (min-width: 769px) { 
+    #contactos .contactos_item:nth-child(1), /* GitHub */
+    #contactos .contactos_item:nth-child(2) { /* LinkedIn */
+        margin-right: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
