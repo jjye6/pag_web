@@ -18,3 +18,4 @@ document.getElementById('imagen_link').addEventListener('click', function() {
 
     document.getElementById('mensaje').textContent = 'Texto copiado al portapapeles';
 });
+
