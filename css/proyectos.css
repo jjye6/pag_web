@@ -41,6 +41,7 @@ nav ul li a {
     color: black;
     font-size: 18px;
 }
+
 #modo_oscuro {
     background-color: transparent;
     font-size: 15px;
@@ -50,8 +51,8 @@ nav ul li a {
     font-weight: bold;
     padding: 5px;
     margin-top: -10px;
-    
 }
+
 #modo_oscuro:hover {
     background-color: black;
 }
@@ -64,7 +65,6 @@ nav ul li a {
     max-width: 800px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-
 }
 #proyectos h2 {
     margin-bottom: 15px;
@@ -80,7 +80,6 @@ nav ul li a {
     border-radius: 5px;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-
 }
 .proyecto a {
     color: black;
@@ -91,7 +90,6 @@ nav ul li a {
     border-radius: 5px;
     margin-bottom: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-
 }
 
 /* MODO OSCURO */
@@ -100,8 +98,8 @@ nav ul li a {
     color: white;
 }
 .dark-mode nav ul li a,
-.dark-mode .perfil h1,
-.dark-mode .perfil p {
+.dark-mode #proyectos h2,
+.dark-mode #proyectos h3 {
     color: white;
 }
 .dark-mode #modo_oscuro:hover {
@@ -117,4 +115,47 @@ nav ul li a {
 }
 .dark-mode .proyecto a {
     color: white;
+}
+
+/* MEDIA */
+@media (max-width: 768px) {
+    * {
+        margin: 5px;
+    }
+    header {
+        flex-direction: column; 
+        align-items: center;
+    }
+    header h2 {
+        margin-left: 0;
+        margin-bottom: 10px; 
+    }
+    nav ul {
+        flex-direction: column; 
+        margin-right: 0;
+    }
+    nav ul li {
+        margin: 5px 0; 
+    }
+    #proyectos {
+        width: 90%; 
+        margin: 20px auto; 
+    }
+    #proyectos h2 {
+        font-size: 24px; 
+    }
+    #proyectos h3 {
+        font-size: 20px; 
+
+    }
+    .proyecto {
+        padding: 10px; 
+    }
+    .proyecto a {
+        font-size: 16px; 
+    }
+    .imagen-proyecto {
+        margin-top: 23px;
+        max-width: 90%; 
+    }
 }

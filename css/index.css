@@ -49,11 +49,6 @@ nav ul li a {
     cursor: pointer;
     font-weight: bold;
     padding: 5px;
-    margin-top: -10px;
-    
-}
-#modo_oscuro:hover {
-    background-color: black;
 }
 
 /* MAIN */
@@ -127,12 +122,12 @@ nav ul li a {
 }
 #texto_recuperar {
     background-color: white;
-    border-radius: 50px;;
+    border-radius: 50px;
     padding: 10px;
     font-size: 15px;
 }
 #texto_recuperar:hover {
-    background-color: rgb(225, 225, 225);
+    background-color: rgb(238, 238, 238);
 }
 
 /* MODO OSCURO */
@@ -141,14 +136,14 @@ nav ul li a {
     color: white;
 }
 .dark-mode nav ul li a,
-.dark-mode .perfil h1,
-.dark-mode .perfil p {
+.dark-mode #perfil h1,
+.dark-mode #perfil p {
     color: white;
 }
 .dark-mode #modo_oscuro:hover {
     background-color: white;
 }
-.dark-mode .foto_perfil {
+.dark-mode #foto_perfil {
     background-color: rgb(77, 77, 77);
 }
 .dark-mode #boton1 {
@@ -160,21 +155,69 @@ nav ul li a {
     color: white;
     border-color: white;
 }
+.dark-mode #boton1:hover {
+    background-color: rgb(203, 203, 203);
+}
+.dark-mode #boton2:hover {
+    background-color: #606060;
+}
 .dark-mode .contactos_items img {
     filter: brightness(0) invert(1);
 }
-.dark-mode #boton1:hover {
-    background-color: rgb(225, 225, 225);
-
-}
-.dark-mode #boton2:first-child:hover {
-    background-color: rgb(77, 77, 77);
-}
-.dark-mode #texto_recuperar {
-    background-color: transparent;
-    border-color: white;
-    color: white;
-}
 .dark-mode #texto_recuperar:hover {
-    background-color: rgb(77, 77, 77);
+    background-color: #989898;
+}
+
+/* MEDIA */
+@media (max-width: 768px) {
+    * {
+        margin: 5px;
+    }
+    header {
+        flex-direction: column; 
+        align-items: center;
+    }
+    header h2 {
+        margin-left: 0;
+        margin-bottom: 10px; 
+    }
+    nav ul {
+        flex-direction: column; 
+        margin-right: 0;
+    }
+    nav ul li {
+        margin: 5px 0; 
+    }
+    #perfil {
+        flex-direction: column; 
+        margin-top: 50px; 
+    }
+    #perfil_info {
+        margin-left: 0; 
+        text-align: center; 
+    }
+    #perfil_info p {
+        margin-top: 10px;
+    }
+    #foto_perfil {
+        width: 200px; 
+        height: 200px;
+    }
+    #perfil h1 {
+        font-size: 28px; 
+    }
+    #perfil h3 {
+        font-size: 20px; 
+    }
+    #perfil p {
+        font-size: 18px; 
+    }
+    .botones {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    #boton1, #boton2 {
+        width: 80%; 
+        margin: 5px 0; 
+    }
 }
