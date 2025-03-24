@@ -26,6 +26,10 @@ header h2 {
     font-size: 30px;
     margin-left: 50px;
 }
+header a {
+    text-decoration: none;
+    color: black;
+}
 
 nav ul {
     list-style: none;
@@ -52,7 +56,6 @@ nav ul li a {
     padding: 5px;
     margin-top: -10px;
 }
-
 #modo_oscuro:hover {
     background-color: black;
 }
@@ -62,7 +65,7 @@ nav ul li a {
     padding: 20px;
     background-color: #f4f4f4;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1000px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
@@ -100,6 +103,9 @@ nav ul li a {
 .dark-mode nav ul li a,
 .dark-mode #proyectos h2,
 .dark-mode #proyectos h3 {
+    color: white;
+}
+.dark-mode header a {
     color: white;
 }
 .dark-mode #modo_oscuro:hover {
