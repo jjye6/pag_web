@@ -6,6 +6,35 @@
     font-family: Arial, sans-serif;
     font-size: 20px;
 }
+a:hover {
+    color: #000000; /* Cambia el color si lo deseas */
+}
+a:hover::after {
+    transform: scaleX(1);
+}
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.aparecer {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecerAnim 0.8s ease forwards;
+}
+@keyframes aparecerAnim {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* BODY */
 body {
@@ -21,21 +50,25 @@ header {
     justify-content: space-between;
     padding: 20px;
     align-items: center;
+    font-weight: bold;
 }
 header h2 {
     font-size: 30px;
-    margin-left: 50px;
 }
 header a {
     text-decoration: none;
     color: black;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin-right: 50px;
 }
 nav ul li {
     display: inline;
@@ -45,7 +78,6 @@ nav ul li a {
     color: black;
     font-size: 18px;
 }
-
 #modo_oscuro {
     background-color: transparent;
     font-size: 15px;
@@ -54,7 +86,7 @@ nav ul li a {
     cursor: pointer;
     font-weight: bold;
     padding: 5px;
-    margin-top: -10px;
+    margin-top: -100px;
 }
 #modo_oscuro:hover {
     background-color: black;
@@ -93,9 +125,12 @@ button {
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
+    will-change: transform;
+    transition: transform 0.3s ease;
 }
 button:hover {
-    background-color: #b2b2b2;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
 }
 #email {
     margin-top: 15px;

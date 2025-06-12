@@ -6,6 +6,23 @@
     font-family: Arial, sans-serif;
     font-size: 20px;
 }
+a:hover {
+    color: #000000;
+}
+a:hover::after {
+    transform: scaleX(1);
+}
+.aparecer {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecerAnim 0.8s ease forwards;
+}
+@keyframes aparecerAnim {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* BODY */
 body {
@@ -13,6 +30,7 @@ body {
     text-align: center;
     color: black;
     transition: background-color 0.5s ease, color 0.5s ease;
+    overflow: hidden;
 }
 
 /* HEADER */
@@ -21,21 +39,38 @@ header {
     justify-content: space-between;
     padding: 20px;
     align-items: center;
+    font-weight: bold;
 }
 header h2 {
     font-size: 30px;
-    margin-left: 50px;
 }
 header a {
     text-decoration: none;
     color: black;
+
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+header a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin-right: 50px;
+
 }
 nav ul li {
     display: inline;
@@ -54,6 +89,7 @@ nav ul li a {
     cursor: pointer;
     font-weight: bold;
     padding: 5px;
+    margin-top: -100px;
 }
 #modo_oscuro:hover {
     background-color: black;
@@ -64,7 +100,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 #foto_perfil {
     width: 400px;
@@ -91,13 +127,25 @@ nav ul li a {
 }
 
 /* BOTONES */
+button {
+    font-weight: bold;
+    will-change: transform;
+    transition: transform 0.3s ease;
+}
+button:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+button:active {
+    transform: scale(0.97);
+}
 .botones {
     margin-top: 20px;
 }
 #boton1 {
     background: black;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 20px;
     margin-right: 10px;
@@ -105,7 +153,7 @@ nav ul li a {
     font-size: 16px;
 }
 #boton2 {
-    background: white;
+    background: transparent;
     color: black;
     border: 2px solid black;
     border-radius: 20px;
@@ -113,12 +161,6 @@ nav ul li a {
     cursor: pointer;
     font-size: 16px;
     padding: 10px 20px;
-}
-#boton1:hover {
-    background-color: rgb(77, 77, 77);
-}
-#boton2:first-child:hover {
-    background-color: rgb(225, 225, 225);
 }
 
 /* CONTACTOS */
@@ -128,14 +170,29 @@ nav ul li a {
 .contactos_items {
     margin-right: 10px;
 }
+.contactos_items img {
+    transition: transform 0.3s ease;
+}
+.contactos_items img:hover {
+    transform: scale(1.2);
+}
 #texto_recuperar {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     border-radius: 50px;
     padding: 10px;
     font-size: 15px;
 }
-#texto_recuperar:hover {
-    background-color: rgb(238, 238, 238);
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 0.5s ease forwards;
+}
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* MODO OSCURO */
@@ -166,17 +223,11 @@ nav ul li a {
     color: white;
     border-color: white;
 }
-.dark-mode #boton1:hover {
-    background-color: rgb(203, 203, 203);
-}
-.dark-mode #boton2:hover {
-    background-color: #606060;
-}
 .dark-mode .contactos_items img {
     filter: brightness(0) invert(1);
 }
-.dark-mode #texto_recuperar:hover {
-    background-color: #989898;
+.dark-mode #texto_recuperar {
+    color: white;
 }
 
 /* MEDIA */
@@ -232,3 +283,4 @@ nav ul li a {
         margin: 5px 0; 
     }
 }
+

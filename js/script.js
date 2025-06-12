@@ -15,14 +15,25 @@ var newText = "<li>Tengo una profunda pasión por la informática y la tecnolog�
 
 changeTextButton.addEventListener("click", function() {
   texto1.innerHTML = newText;
+  texto1.classList.add("fade-in");
   texto2.innerHTML = "";
   changeTextButton.style.display = "none";
   restoreTextButton.style.display = "inline-block";
 });
 restoreTextButton.addEventListener("click", function() {
   texto1.innerHTML = originalTexts[0];
+  texto1.classList.remove("fade-in");
   texto2.innerHTML = originalTexts[1];
   changeTextButton.style.display = "inline-block";
   restoreTextButton.style.display = "none";
 });
+
+// ANIMACIÓN DE APARICIÓN 
+window.addEventListener("DOMContentLoaded", () => {
+  const elementos = document.querySelectorAll(".aparecer");
+  elementos.forEach((el, index) => {
+      el.style.animationDelay = `${index * 0.2}s`;
+  });
+});
+
 
